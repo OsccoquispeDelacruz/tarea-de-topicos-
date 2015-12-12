@@ -28,10 +28,15 @@ def euclidean(v1,v2):
   return sqrt(sum([(v1[i]-v2[i])**2 for i in range(len(v1))]))
 
 
+#####distancia euclidiana ############ ejercicio numero 2...........................
+def euclidean(v1,v2):
+return sqrt(sum([(v1[i]-v2[i])**2 for i in range(len(v1))]))
+##### fin distancia euclidiana ############ ejercicio numero 2...........................
+
 ####### formula de manjathan########### ejercicio numero 3....................................................###############
 
  def manjathan(v1,v2):
-return (sum(|(v1[i]-v2[i]) for i in range(len(v1))|))
+return abs(sum(|(v1[i]-v2[i]) for i in range(len(v1))|))
 
 ####### fin formula de manjathan########### ejercicio numero 3....................................................###############
 
