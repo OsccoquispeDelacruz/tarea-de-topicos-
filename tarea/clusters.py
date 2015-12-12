@@ -63,6 +63,30 @@ def pearson(v1,v2):
 
   return 1.0-num/den
 
+###################################################ejercicio numero 3333333
+def pearson(v1,v2):
+  # Sumas simples
+  sum1=sum(v2)
+  sum2=sum(v1)
+
+  n = int(len(v2)) # la division es entera
+  
+  # Sums of the squares ##sacanddo la raiz cuadrada  del punto 
+  sum1Sq=sum([pow(v,2) for v in v1])
+  sum2Sq=sum([pow(v,2) for v in v2])	
+  
+  # Sum of the products
+  pSum=sum([v1[i]*v2[i] for i in range(len(v1))])
+  
+  # Calculate r (Pearson score)
+  num=pSum-(sum1*sum2/n)
+  den=sqrt((sum1Sq-pow(sum1,2)/n)*(sum2Sq-pow(sum2,2)/n))
+  if den==0:
+    return 0
+
+  return 1.0-num/den
+########################################fin fin  ejercicio numero 3333333
+
 class bicluster:
   def __init__(self,vec,left=None,right=None,distance=0.0,id=None):
     self.left=left
